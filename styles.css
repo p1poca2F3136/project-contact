@@ -1,20 +1,19 @@
+
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #181825; /* Cor do fundo */
-    font-family: Arial, sans-serif;
-    position: relative;
-    height: 100vh;
-}
-
-.container {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    z-index: 1; /* O quadrado ficará abaixo do meteoro e partículas */
+    background-color: #181825; /* Cor do fundo */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .square {
@@ -40,56 +39,18 @@ body {
     margin-bottom: 20px;
 }
 
-.text-content h1, .text-content p {
-    color: #CDD6F4; /* Cor do texto */
+.text-content h1 {
+    font-size: 24px;
+    margin: 0;
     text-align: center;
+    font-family: Arial, sans-serif;
+    color: #CDD6F4; /* Cor do texto */
 }
 
-.meteor-container {
-    position: absolute;
-    top: -100px;
-    left: -100px;
-    width: 20px;
-    height: 20px;
-    z-index: 3; /* Partículas acima do meteoro e quadrado */
-}
-
-.meteor {
-    position: relative;
-    width: 20px;
-    height: 20px;
-    background: radial-gradient(circle, #ff5f6d, #ffc371);
-    border-radius: 50%;
-    box-shadow: 0 0 50px rgba(255, 215, 0, 0.8);
-    animation: meteor-fall 4s linear infinite;
-    z-index: 2; /* Meteoro acima do quadrado */
-}
-
-@keyframes meteor-fall {
-    0% {
-        transform: translate(0, 0) rotate(45deg);
-    }
-    100% {
-        transform: translate(600px, 900px) rotate(45deg);
-    }
-}
-
-.particle {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 3; /* Partículas acima do meteoro */
-    animation: particle-fall linear infinite;
-}
-
-@keyframes particle-fall {
-    0% {
-        transform: translate(0, 0) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(450px, 900px) scale(0);
-        opacity: 0;
-    }
+.text-content p {
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 0 0;
+    font-family: Arial, sans-serif;
+    color: #CDD6F4; /* Cor do texto */
 }
