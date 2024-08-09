@@ -26,7 +26,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    position: relative; /* Adiciona posicionamento relativo */
 }
 
 .central-image {
@@ -45,10 +44,6 @@ body {
     text-align: center;
     font-family: Arial, sans-serif;
     color: #CDD6F4; /* Cor do texto */
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-    overflow: hidden; /* Garante que letras não saiam do contêiner */
 }
 
 .text-content p {
@@ -57,25 +52,4 @@ body {
     margin: 10px 0 0;
     font-family: Arial, sans-serif;
     color: #CDD6F4; /* Cor do texto */
-}
-
-.letter {
-    display: inline-block;
-    position: absolute;
-    transition: transform 2s ease, opacity 2s ease;
-}
-
-.falling {
-    animation: fall 2s forwards;
-}
-
-@keyframes fall {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(100vh); /* Move para a parte inferior da tela */
-        opacity: 0.5;
-    }
 }
