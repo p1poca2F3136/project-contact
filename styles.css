@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    z-index: 1; /* Garantir que o quadrado fique abaixo do meteoro */
+    z-index: 1; /* O quadrado ficará abaixo do meteoro e partículas */
 }
 
 .square {
@@ -45,17 +45,24 @@ body {
     text-align: center;
 }
 
-.meteor {
+.meteor-container {
     position: absolute;
     top: -100px;
     left: -100px;
+    width: 20px;
+    height: 20px;
+    z-index: 3; /* Partículas acima do meteoro e quadrado */
+}
+
+.meteor {
+    position: relative;
     width: 20px;
     height: 20px;
     background: radial-gradient(circle, #ff5f6d, #ffc371);
     border-radius: 50%;
     box-shadow: 0 0 50px rgba(255, 215, 0, 0.8);
     animation: meteor-fall 4s linear infinite;
-    z-index: 2; /* Garantir que o meteoro e suas partículas fiquem acima do quadrado */
+    z-index: 2; /* Meteoro acima do quadrado */
 }
 
 @keyframes meteor-fall {
@@ -69,9 +76,10 @@ body {
 
 .particle {
     position: absolute;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     pointer-events: none;
+    z-index: 3; /* Partículas acima do meteoro */
     animation: particle-fall linear infinite;
 }
 
@@ -81,7 +89,7 @@ body {
         opacity: 1;
     }
     100% {
-        transform: translate(300px, 600px) scale(0);
+        transform: translate(450px, 900px) scale(0);
         opacity: 0;
     }
 }
