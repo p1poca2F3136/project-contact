@@ -18,7 +18,7 @@ body {
 .square {
     width: 300px;
     height: 400px;
-    background-color: #CDD6F4; /* Cor do quadrado */
+    background-color: #1E1E2E; /* Cor do quadrado */
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -43,7 +43,7 @@ body {
     margin: 0;
     text-align: center;
     font-family: Arial, sans-serif;
-    color: #181825; /* Cor do texto */
+    color: #CDD6F4; /* Cor do texto */
 }
 
 .text-content p {
@@ -51,5 +51,5 @@ body {
     text-align: center;
     margin: 10px 0 0;
     font-family: Arial, sans-serif;
-    color: #181825; /* Cor do texto */
+    color: #CDD6F4; /* Cor do texto */
 }
