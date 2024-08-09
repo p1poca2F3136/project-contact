@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Adiciona a classe de animação para as letras
             const letters = nameElement.querySelectorAll('.letter');
             letters.forEach((letter, index) => {
-                letter.style.left = `${Math.random() * 100}px`;
-                letter.style.top = `${Math.random() * 100}px`;
+                letter.style.left = `${letter.getBoundingClientRect().left - nameElement.getBoundingClientRect().left}px`;
+                letter.style.top = `${letter.getBoundingClientRect().top - nameElement.getBoundingClientRect().top}px`;
                 letter.classList.add('falling');
             });
 
